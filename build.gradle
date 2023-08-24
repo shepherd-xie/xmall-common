@@ -16,6 +16,20 @@ configurations {
     }
 }
 
+repositories {
+    mavenLocal()
+    maven {
+        url 'https://maven.aliyun.com/repository/public/'
+    }
+    maven {
+        url 'https://maven.aliyun.com/repository/spring/'
+    }
+    maven {
+        url 'https://plugins.gradle.org/m2/'
+    }
+    mavenCentral()
+}
+
 publishing {
     publications {
         maven(MavenPublication) {
@@ -27,12 +41,6 @@ publishing {
             pom {
                 name = 'Xmall common'
             }
-        }
-    }
-
-    repositories {
-        maven {
-            mavenLocal()
         }
     }
 }
